@@ -1,0 +1,11 @@
+# Incident — Labs Portfolio
+
+This repository collects DFIR / malware lab walkthroughs and detection work.
+
+Current labs
+- 01 — REvil Ransomware (Splunk, Sysmon) — Investigation + Sigma & Splunk detections → ./REvil/
+
+Repository files
+- LICENSE — MIT license (covers the entire repo)
+- labs/ — (future) recommended location for multiple lab folders
+- README.md — this index page
