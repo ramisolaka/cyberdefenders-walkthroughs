@@ -1,34 +1,51 @@
-# REvil Walkthrough
+# REvil Investigation
 
-> Simple ransomware investigation walkthrough built from the CyberDefenders REvil lab.
+> Portfolio-style ransomware investigation walkthrough based on the CyberDefenders REvil lab.
 
 `Splunk` `DFIR` `Ransomware` `Threat Intel`
 
 ---
 
-## Overview
+## Project Summary
 
-This walkthrough shows how to investigate a REvil ransomware infection step by step using Splunk, CyberChef, VirusTotal, and ANY.RUN.
+This project documents a REvil ransomware investigation using Windows event telemetry and external threat intelligence. The objective was to trace the attack from the ransom note back to the malware, identify anti-recovery behavior, validate the sample hash, and extract attacker infrastructure.
 
-The investigation covers:
+## Scenario
 
-- finding the ransom note
-- tracing the process behind it
-- locating the malware executable
-- identifying the recovery-disruption command
-- validating the file hash
-- identifying attacker infrastructure
+The investigation starts with evidence of ransomware activity on a Windows host. From there, the workflow follows the artifacts left behind by the malware to identify:
 
----
+- the ransom note filename
+- the responsible process ID
+- the executable path
+- the recovery-disruption command
+- the SHA256 hash
+- the associated onion domain
 
-## Skills Used
+## Tools Used
+
+- Splunk
+- CyberChef
+- VirusTotal
+- ANY.RUN
+
+## Skills Demonstrated
 
 - Splunk log analysis
 - Windows event investigation
 - Process tracing
-- Base64 decoding with CyberChef
-- Hash validation with VirusTotal
-- IOC review with ANY.RUN
+- Base64 decoding
+- IOC extraction
+- Threat intelligence validation
+- Detection-oriented thinking
+
+## Key Findings
+
+- The ransomware dropped the note `5uizv5660t-readme.txt`
+- The process linked to the activity was `5348`
+- The executable ran from `C:\Users\Administrator\Downloads\facebook assistant.exe`
+- The malware attempted to delete shadow copies with PowerShell
+- The SHA256 hash matched a known malicious sample
+- DNS-related intelligence revealed the operator onion domain
 
 ---
 
@@ -209,3 +226,10 @@ The DNS results show a Tor hidden service domain, which is likely part of the ra
 
 - Splunk rule: [REvil/detections/revil-ransom-note.spl](REvil/detections/revil-ransom-note.spl)
 - Sigma rule: [REvil/detections/revil-ransom-note.yml](REvil/detections/revil-ransom-note.yml)
+
+## What This Demonstrates
+
+- Ability to move from host artifacts to attacker context
+- Practical use of Splunk for forensic-style investigation
+- Clear documentation of findings and evidence
+- Translation of lab findings into reusable detections
