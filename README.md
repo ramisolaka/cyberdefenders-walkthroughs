@@ -1,7 +1,35 @@
 # Lab Reports
 
-This repository contains simple cybersecurity lab walkthroughs written to be easy to follow.
+Cybersecurity lab walkthroughs written to help learners follow the investigation clearly while also showing analyst thinking and documentation quality.
 
-## Labs
+## Repository Layout
 
-- [CyberDefenders REvil](REvil/README.md)
+```text
+labs/
+  cyberdefenders/
+    revil/
+      README.md
+      images/
+```
+
+## Platforms
+
+### CyberDefenders
+
+- [REvil](labs/cyberdefenders/revil/README.md)
+
+## What Each Lab Includes
+
+- Short overview and scenario
+- Skills demonstrated
+- Step-by-step walkthrough
+- Queries used during the investigation
+- Screenshots of key evidence
+- Final answers and analyst notes
+
+## Goal
+
+This repo is built to help in two ways:
+
+- Make labs easier for other learners to follow
+- Build a clean portfolio of practical SOC and DFIR work
