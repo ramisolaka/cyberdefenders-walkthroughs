@@ -1,0 +1,3 @@
+index=your_index event.code=11
+| search winlog.event_data.TargetFilename="*5uizv5660t-readme.txt"
+| table _time winlog.event_data.TargetFilename winlog.event_data.ProcessId winlog.event_data.User

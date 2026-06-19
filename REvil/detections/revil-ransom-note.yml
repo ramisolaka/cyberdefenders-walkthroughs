@@ -1,0 +1,21 @@
+title: REvil Ransom Note Creation
+id: revil-ransom-note-creation
+status: experimental
+description: Detects creation of REvil ransom note files
+author: Rami Solaka
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    TargetFilename|contains: '5uizv5660t-readme.txt'
+  condition: selection
+fields:
+  - Image
+  - ProcessId
+  - TargetFilename
+  - User
+falsepositives:
+  - Unknown
+level: high

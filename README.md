@@ -202,3 +202,10 @@ The DNS results show a Tor hidden service domain, which is likely part of the ra
 | Recovery disruption command | `Get-WmiObject Win32_Shadowcopy \| ForEach-Object {$_.Delete();}` |
 | SHA256 hash | `b8d7fb4488c0556385498271ab9fffdf0eb38bb2a330265d9852e3a6288092aa` |
 | Onion domain | `aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketr56nf6aq2nmyoyd.onion` |
+
+---
+
+## Detection Files
+
+- Splunk rule: [REvil/detections/revil-ransom-note.spl](REvil/detections/revil-ransom-note.spl)
+- Sigma rule: [REvil/detections/revil-ransom-note.yml](REvil/detections/revil-ransom-note.yml)
