@@ -98,7 +98,7 @@ index=revil event.code=11
 
 **Evidence**
 
-![Question 2 search](REvil/images/q2-process-id-search.png)
+![Question 2 search](images/q2-process-id-search.png)
 
 **Answer**
 
@@ -124,7 +124,7 @@ index=revil event.code=1
 
 **Evidence**
 
-![Question 3 search](REvil/images/q3-executable-path-search.png)
+![Question 3 search](images/q3-executable-path-search.png)
 
 **Answer**
 
@@ -150,9 +150,9 @@ index=revil event.code=1
 
 **Evidence**
 
-![Question 4 search](REvil/images/q4-encoded-command-search.png)
+![Question 4 search](images/q4-encoded-command-search.png)
 
-![Question 4 decode](REvil/images/q4-cyberchef-decode.png)
+![Question 4 decode](images/q4-cyberchef-decode.png)
 
 **Answer**
 
@@ -180,9 +180,9 @@ index=revil event.code=1 "facebook assistant.exe"
 
 **Evidence**
 
-![Question 5 hash search](REvil/images/q5-hash-search.png)
+![Question 5 hash search](images/q5-hash-search.png)
 
-![Question 5 VirusTotal check](REvil/images/q5-virustotal-check.png)
+![Question 5 VirusTotal check](images/q5-virustotal-check.png)
 
 **Answer**
 
@@ -204,7 +204,7 @@ Check sandbox or threat intelligence results and review DNS activity for suspici
 
 **Evidence**
 
-![Question 6 ANY.RUN DNS activity](REvil/images/q6-onion-domain-anyrun.png)
+![Question 6 ANY.RUN DNS activity](images/q6-onion-domain-anyrun.png)
 
 **Answer**
 
@@ -231,8 +231,8 @@ The DNS results show a Tor hidden service domain, which is likely part of the ra
 
 ## Detection Files
 
-- Splunk rule: [REvil/detections/revil-ransom-note.spl](REvil/detections/revil-ransom-note.spl)
-- Sigma rule: [REvil/detections/revil-ransom-note.yml](REvil/detections/revil-ransom-note.yml)
+- Splunk rule: [REvil/detections/revil-ransom-note.spl](detections/revil-ransom-note.spl)
+- Sigma rule: [REvil/detections/revil-ransom-note.yml](detections/revil-ransom-note.yml)
 
 ## What This Demonstrates
 
